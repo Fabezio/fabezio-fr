@@ -1,0 +1,176 @@
+#menu {
+	padding-bottom: 0 !important;
+}
+h1  {
+    text-align: center;
+}
+
+hr {
+    width: 10rem;
+    display: block;
+    align-content: center;
+
+    height: 5px;
+    border-radius: 2px;
+    background-color: #444;
+    margin: 2rem auto;
+}
+.nav-item :hover {
+	text-decoration: underline rgba(0, 255, 255, .7);
+}
+
+.text-shadow {
+	text-shadow: 1px 1px black;
+	color: white;
+	transition: all 0.5s ease-in-out !important;
+}
+
+.text-shadow:hover {
+	text-shadow: none;
+	border: none;
+	background: none;
+	
+}
+
+#actual-state span {
+	padding-left: .5rem;
+}
+
+section {
+    margin: 1rem 0 ;
+}
+
+#login {
+	padding: 10px 10px 0;
+}
+
+section,
+article {
+	/* margin: 0 1rem 1rem; */
+	
+}
+
+#services h2 {
+    text-align: center;
+}
+
+#services p {
+    text-align: justify;
+}
+#services .btn {
+	border: outset 2px skyblue;
+	text-shadow: 1px 1px black;
+	border-radius: 0.5rem;
+	font-weight: 600;
+	/* width: 16em; */
+}
+
+.card-body i {
+	padding-bottom: 1rem;
+}
+
+.card-body {
+	height: 21rem;
+}
+
+.card {
+	margin: 1rem 0;
+	width: 12rem;
+}
+
+.card h6 {
+	text-align: right;
+
+}
+
+#portfolio .card {
+	width: 360px;
+	border-radius: 1em;
+	
+}
+
+#portfolio .card img {
+	width: 320px;
+	filter: grayscale(100%);
+	opacity: 0.75;
+}
+
+#portfolio .card img:hover {
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
+#portfolio .card h4:hover {
+	text-decoration: underline limegreen;
+}
+
+#portfolio .card h4 {
+	margin-top: 20px;
+}
+
+#home h3 {
+	text-align: center;
+}
+
+.html {
+	color: orangered;
+}
+
+.css,
+.react {
+	color: blue;
+}
+
+.bs {
+	color: purple;
+}
+
+.js {
+	color: yellow;
+}
+
+.vue {
+	color: lime;
+}
+
+.node {
+	color: green;
+}
+
+.db {
+	color: gray;
+}
+
+.angular {
+	color: darkred;
+}
+
+.php {
+	color: royalblue;
+}
+
+
+/* barre sociale */
+
+.fa-youtube-square,
+.fa-google-plus-square {
+	color: red;
+}
+
+.fa-github-square {
+	color: black;
+}
+
+#social .nav-item {
+	margin: 0 -0.25rem !important;
+}
+
+footer {
+	background: rgba(100, 100, 100, 0.3);
+	padding: 1rem 0;
+	
+}
+
+#civil {
+    padding: 0 1rem;
+}

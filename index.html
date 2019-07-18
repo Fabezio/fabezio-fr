@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- modules vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- BS / JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- modules css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/347214cdeb.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <link rel="icon" type="icon/png" href="./img/favicon (mod).png" >
+    <title>Fabezio | Coder pour vous</title>
+    <script src="./scripts/clock.js"></script>
+    
+</head>
+<body onload="startTime()">
+        <div id="app">
+            <img id="banner" src="./img/bannière metal luisant.png" class="img-fluid" alt="fabezio.fr">
+            <div class=" sticky-top" >
+                <nav id="menu" class=" navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand text-shadow" href="index.html#home"><img  src="img/favicon (mod).png" width="32"> fabezio.fr</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" > 
+                            <template v-for="link in links">
+                                <li class="nav-item active text-shadow"  >
+                                    <a class="nav-link" :href="'#' + link.index"><i :class="link.icon"></i> {{link.name}}</a>
+                                </li>
+                            </template> 
+                        </ul>
+                        <div >
+                            <a href="./login.html" class="text-light mr-sm-2 btn btn-outline-success text-shadow " ><i class="fas fa-sign-in-alt"> </i>
+                                Connexion
+                            </a>
+                            <a href="#register" class="text-light btn btn-outline-warning text-shadow" ><i class="fas fa-user-plus"></i>
+                                Inscription
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                
+                <div id="actual-state" class="navbar nav justify-content-end text-light bg-dark">
+                    <span class="nav-item" id="greeting" ></span>
+                    <span class="nav-item" >Il est</span>
+                    <span class="nav-item"  id="clock" ></span>.
+                </div>
+                
+            </div>
+            
+            <div id="home" class="">
+                <div >
+                    <div class="alert alert-info text-center" role="alert">
+                        <h1>fabezio.fr</h1>
+                        <h2><small><i>on code pour vous</i></small></h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <h3>Bienvenue!</h3>
+                    <p>Je suis Fabezio, développeur Web orienté Javascript, plus exactement un codeur Javascript orienté web <i class="far fa-smile-wink"></i></p>
+                </div>
+            </div>
+
+            <hr class="">
+            
+            <section id="services" class="container">
+                <h1>Services</h1>
+                <div class="row">
+                    <template v-for="service in services">
+                        <div class="col-md-4">
+                            
+                            <h2>{{service.title}}</h2>
+                            <p>{{service.paragraph}}</p>
+                            
+                        </div>
+                        
+                            
+                        
+                    </template>
+                    <!--                         
+                    <div class="col">
+                        <h2>Création</h2>
+                        <p>Besoin d'un site web? Vous êtes au bon endroit. Tout sera fait pour répondre à vos besoins.</p>
+                       
+                    </div>
+                    
+                    <div class="col">
+                        <h2>Adaptation</h2>
+                        <p>Si votre site manque de réactivité ou est mal supporté par les navigateurs, alors il est urgent de le remettre au goût du jour.</p>
+                       
+                        
+                    </div>
+                    
+                    <div class="col">
+                        <h2>Optimisation</h2>
+                        <p>Vous avez un site web mais il ne s'affiche pas correctement sur votre smartphone ou tablette? Rendez-le responsive! De cette façon, vous l'adapeterz à tous les supports numériques, fixes ou mobiles, et même pour les écrans TV!</p>
+                    </div> -->
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="#" role="button" class="btn btn-lg btn-block btn-primary text-light ">Je demande une création/amélioration de site web</a>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="">
+            
+            <section id="skills" class="container">
+                <h1>Compétences</h1>
+                <ul>
+                    <li>Intégration HTML/CSS</li>
+                    <li>Dynamisation</li>
+                    <li>Mise en service / Hébergement</li>
+                    <li>Attachement serveur</li>
+                    <li>Préparation de bases de données</li>
+                </ul>
+                
+                <h1>Formation</h1>
+                <div class="row ">
+                    <template v-for="card in cards">
+                        <div class="col-md-3">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <i :class="card.class" class="fa-8x" ></i>
+                                    <h4 class="card-subtitle mb-2 text-muted">{{card.name}}</h4>
+                                    <h6><em>Version: {{card.version}}</em></h6>
+                                    <p class="card-text">{{card.desc}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                
+                <div class="row">
+                    <p><em>* La version supportée dépend du navigateur</em></p>
+                </div>
+            </section> 
+
+            <hr class="">
+            
+            <section id="portfolio" class="container">
+                <h1>Portfolio</h1>
+                <article>
+                    <h2>Sites créés en formation:</h2>
+                    <div class="row ">
+                        <template v-for="creation in creations">
+                            <div class="col-md-4">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <a :href="'https://' + creation.url" >
+                                            <img :src="'img/port/' + creation.img">
+                                            <h4 class="card-subtitle mb-2 text-muted" >{{creation.name}}</h4>
+                                        </a>
+                                        <p class="card-text">{{creation.desc}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </article>
+            </section>
+
+            <hr class="">
+
+            <section id="register" class="container">
+                    <h1>Inscription</h1>
+                    <form class="">
+                        <div class="form-group">
+                            
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="mr" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="mr">Monsieur</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="mrs" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="mrs">Madame</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="ms" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="ms">Mademoiselle</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstname">Prénom</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="Mon prénom">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastname">Nom de famille</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Mon nom de famille">
+                            </div>
+                            
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Mon adresse mail">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" class="form-control" id="password" placeholder="Mon mot de passe">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="password">Confirmation du mot de passe</label>
+                                <input type="password" class="form-control" id="password" placeholder="Je répète">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Adresse</label>
+                            <input type="text" class="form-control" id="address" placeholder="Mon adresse">
+                        </div>
+                        <div class="form-group">
+                            <label for="address2">Précisions</label>
+                            <input type="text" class="form-control" id="address2" placeholder="Immeuble, étage, boîte...">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="zipCode">Code postal</label>
+                                <input type="text" class="form-control" id="zipCode" placeholder="88888">
+                            </div>
+                            <div class="form-group col-md-9">
+                                <label for="city">Ville</label>
+                                <input type="text" class="form-control" id="city" placeholder="Ma Ville">
+                            </div>
+                            <!-- <div class="form-group col-md-4">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select> -->
+                                <!-- </div> -->
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Présentez-vous en quelques mots</label><br>
+                                <textarea class="form-control" name="" id="descrition" cols="120" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Je certifie que toutes les informations fournies sont exactes
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block btn-lg text-shadow">Enregistrer</button>
+                        </form>
+                    </section>
+                    
+                    <hr class="">
+                    
+            <nav id="social" class="navbar justify-content-end">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="fab fa-twitter-square fa-2x"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><span class="fab fa-facebook-square fa-2x"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><i class="fab fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-github-square fa-2x"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-youtube-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <footer class="container-fluid ">
+                <p class="text-center">&copy; fabezio.fr - 2019</p>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <p class="text-center">Plan du site</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p class="text-center">Qui suis-je?</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p class="text-center">Contactez-moi</p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p class="text-center">Aide</p>
+                    </div>
+                        
+                    <div class="col-lg-2">
+                        <p class="text-center">FAQ</p>
+                    </div>
+                    <!-- <div class="col-lg-2" >
+                    </div> -->
+                </div> 
+            </footer>
+        </div>
+        
+        <script src="./scripts/app.js"></script>
+        <script src="./scripts/greet.js"></script>
+        
+    </body>
+</html>
+
