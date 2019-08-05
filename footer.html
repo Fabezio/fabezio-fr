@@ -25,7 +25,7 @@
 </head>
 <body onload="startTime()">
         <div id="app">
-            <img id="banner" src="./img/bannière metal luisant.png" class="img-fluid" alt="fabezio.fr">
+          
             <!-- <div class="silver-shadow " > -->
                 <nav id="menu" class="silver-shadow text-center navbar navbar-expand-md navbar-dark bg-dark p-3 sticky-top">
                     <a class="navbar-brand text-shadow" href="index.html#home"><img  src="img/favicon (mod).png" width="32"> fabezio.fr</a>
@@ -35,13 +35,13 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0" > 
                             <template v-for="link in links">
-                                <li class="nav-item text-shadow active" >
+                                <li class="nav-item active text-shadow"  >
                                     <a class="nav-link" :href="'index.html#' + link.index"><i :class="link.icon"></i> {{link.name}}</a>
                                 </li>
                             </template> 
                         </ul>
-                        <div class=" ">
-                            <div data-toggle="modal" data-target="#login" class="text-light btn btn-outline-success text-shadow mx-2" ><i class="fas fa-sign-in-alt"></i>
+                        <div class="">
+                            <div data-toggle="modal" data-target="#login" class="text-light btn btn-outline-success text-shadow mx-2 " ><i class="fas fa-sign-in-alt"></i>
                                 Connexion
                             </div>
                             <a data-toggle="modal" data-target="#register" class="text-light btn btn-outline-warning text-shadow" ><i class="fas fa-user-plus"></i>
@@ -173,168 +173,100 @@
                             </div>
                         </div>
                     </div>
-                
-                <div id="home" class="">
-                    <div >
-                        <div class="alert alert-shadow alert-info text-center py-5" role="alert">
-                            <h1 class="text-center">fabezio.fr</h1>
-                            <h2><small><i>on code pour vous</i></small></h2>
-                        </div>
-                    </div>
-                    <div class="container pt-5">
-                        <h2 class="header-shadow">Bienvenue!</h2>
-                        <p>Je suis Fabezio, développeur Web orienté Javascript, plus exactement un codeur Javascript orienté web <i class="far fa-smile-wink"></i>.</p>
-                    </div>
-                </div>
-                
-                <hr class="my-5">
-                
-                <section id="services" class="container">
-                    <h1 class="text-center mb-4 header-shadow">Services</h1>
-                    <div class="card-deck my-4">
-                        <template v-for="service in services">
-                            <div class="card silver-shadow">
-                                
-                                <h2 class="card-header">{{service.title}}</h2>
-                                <div class="card-body">
-                                    <p class="card-text">{{service.paragraph}}</p>
-                                    
-                                </div>
-                                
-                            </div>
-                            
-                            
-                            
-                        </template>
+
+                <section id="sitemap" class="my-5"   >
+                    <div class="container">
+                        <h2 class="text-center header-shadow mb-4">Plan du site</h2>
+                        <p>la hierarchie du site</p>
                         
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="#" class="btn btn-lg btn-block btn-primary text-light btn-shadow ">Je demande une création/amélioration de site web</a>
-                        </div>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="author" class="my-5"   >
+                    <div class="container">
+                        <h2 class="text-center header-shadow mb-4">Qui suis-je?</h2>
+                        <p>quelqu'un qui vous veut du bien</p>
+                        
                     </div>
                 </section>
-                
-                <hr class="my-5 social-shadow">
-                
-                <section id="skills" class="container">
-                    <!-- <h1 class="text-center mb-4">Compétences</h1>
-                    <ul>
-                        <li>Intégration HTML/CSS</li>
-                        <li>Dynamisation</li>
-                        <li>Mise en service / Hébergement</li>
-                        <li>Attachement serveur</li>
-                        <li>Préparation de bases de données</li>
-                    </ul> -->
-                    
-                    <h1 class="text-center mb-4 header-shadow">Formation</h1>
-                    <h2 class="my-3 header-shadow">Langages</h2>
-                    <div class="card-deck ">
-                        <template v-for="card in languages">
-                            <div class="card silver-shadow text-center">
-                                <div class="card-body">
-                                    <i :class="card.class" class="fa-10x mt-2 card-img-top " ></i>
-                                    <h6 class="text-right text-muted mt-2"><em>Version: {{card.version}}</em></h6>
-                                    <p class="card-text">{{card.desc}}</p>
-                                </div>
-                                <h4 class="card-footer mb-0">{{card.name}}</h4>
-                            </div>
-                        </template>
-                    </div>
-                    
-                   
-                    <div class="row mt-3">
-                        <p><em>* La version supportée dépend du navigateur</em></p>
-                    </div>
-                    
-                    
-                    
-                    <h2 class="my-3 header-shadow">Frameworks</h2>
-                    <div class="card-deck ">
-                        <template v-for="card in frameworks">
-                            <div class="card silver-shadow text-center">
-                                <i :class="card.class" class="card-img-top mt-2 fa-10x" ></i>
-                                <div class="card-body">
-                                    <h6 class="text-right text-muted mt-2"><em>Version: {{card.version}}</em></h6>
-                                    <p class="card-text">{{card.desc}}</p>
-                                </div>
-                                <h4 class="card-footer mb-0 display-5 ">{{card.name}}</h4>
-                            </div>
-                        </template>
-                    </div>
-                    
-                </section> 
-                
-                
-                <hr class="my-5 social-shadow">
-                
-                
-                <section id="portfolio" class="container"> 
-                    <h1 class="text-center mb-4 header-shadow">Portfolio</h1>
-                    <article>
-                        <h2 class="header-shadow mb-3">Sites créés en formation:</h2>
-                        <div class="card-deck ">
-                            <template v-for="creation in creations">
-                                <div class="card silver-shadow text-center">
-                                    <img class="card-img-top " data-toggle="modal" :data-target="'#' + creation.mod" :src="'img/port/' + creation.img">
-                                    <!-- <div class="card-header">
-                                    </div> -->
-                                    <div class="card-body">
-                                        <h3 class="card-title text-uppercase">{{creation.name}}</h3>
-                                        <p class="card-text display-5" >{{creation.desc}}</p>
-                                    </div>
-                                    <div class="card-footer mb-0">
-                                        <a :href="'https://' + creation.url" class="btn btn-outline-link display-5 text-uppercase "  >
-                                            <i class="fas fa-sign-in-alt"></i> Consulter
-                                        </a>
-                                        
-                                    </div>
-                                </div>
-                                <div class="modal collapse fade" :id="creation.mod">
-                                    <div class="modal-dialog modal-lg">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="" >{{creation.name}}</h4>
-                                                
-                                                <button class="close" data-dismiss="modal">&times;</button>
-                                                
-                                            </div>
-                                            <div class="modal-body">
-                                                <img class="w-100" :src="'img/port/' + creation.img">
-                                                
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button class="btn btn-dark btn-lg" data-dismiss="modal">Annuler</button>
-                                                <a :href="'https://' + creation.url" class="btn btn-success btn-lg">Aller</a>
 
-                                            </div>
+                <hr class="my-5">
 
+                <section id="contact" class="my-5"   >
+                    <div class="container">
+                        <h2 class="text-center header-shadow  mb-4">Contactez-moi</h2>
+                        <p>si vous avez des suggestions ou questions spécifiques, merci de les déposer dans la boite en cliquant ci-dessous <span class="text-muted">(pour les questions, veuillez d'abord consulter la <a href="#faq">foire aux questions</a>)</span></p>
+                        <div class="btn btn-info btn-lg btn-block " data-toggle="modal" data-target="#messageModal">Déposer un message</div>
+                        
+                        <div class="modal collapse fade" id="messageModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3>Editer un message</h3>
+                                        <div class="close" data-dismiss="modal">&times;</div>
+                                    </div>
+                        <form method="POST">
+                                    <div class="modal-body">
+                                        <div class="form-row ">
+                                            <label for="email">Email: </label>
+                                            <input type="email" id="email" class="form-control" placeholder="Mon email" >
+                                        </div>
+                                        <div class="form-row my-3">
+                                            <label for="name">Nom: </label>
+                                            <input type="text" id="name" class="form-control" placeholder="Mon nom">
+                                        </div>
+                                        <div class="form-row">
+                                            <label for="message">Message</label>
+                                            <textarea class="form-control" type="text" id="message" cols="50" rows="3" placeholder="Entrez votre texte ici"></textarea>
                                         </div>
 
-                                        
                                     </div>
-                                </div>
-                            </template>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-dark" data-dismiss="modal">annuler</button>
+                                        <input class="btn btn-info" type="submit" value="Transmettre"></input>
+                                    </div>
+                                </form>
+                                
+                                
+                                
+                            </div>
                         </div>
-                    </article>
-                </section>
-<!--                 
-                <template >
-                </template> -->
-                
-                <hr class="my-5 social-shadow">
-
-           
-                <!-- <hr class="my-5"> -->
-                <nav id="social" class="navbar justify-content-end">
+                        
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+            <section id="help" class="my-5"   >
+                <div class="container">
+                    <h2 class="text-center header-shadow mb-4">Aide</h2>
+                    <p>au secours, je suis perdu!</p>
+                    
+                </div>
+            </section>
+            
+            <hr class="my-5">
+            <section id="author" class="my-5"   >
+                <div class="container">
+                    <h2 class="text-center header-shadow mb-4">Foire aux questions</h2>
+                    <p>Questions fréquemment posées</p>
+                    
+                </div>
+            </section>
+            
+            <hr class="my-5">
+            
+            <!-- <hr class="my-5"> -->
+            <nav id="faq" class="navbar justify-content-end">
                     <ul class="nav">
                         <template v-for="item in social">
                             <li class="nav-item">
-                                <a class="nav-link" :href="item.link"><i class="fa-2x " :class="item.logo"></i></a>
+                                <a class="nav-link" :href="item.link"><i class="fa-2x" :class="item.logo"></i></a>
                             </li>
                         </template>
                     </ul>
-                    
                 </nav>
                 <footer class="container-fluid bg-dark text-light ">
                     <p class="text-center pt-3">&copy; fabezio.fr - 2019</p>
@@ -348,16 +280,9 @@
                     </ul>
                 </footer>
             </div>
-            
             <script src="./scripts/app.js"></script>
-            
             <script src="./scripts/bs.js"></script>
             <script src="./scripts/greet.js"></script>
             
-        </body>
-        </html>
-        
-        
-        
-        
-         
+</body>
+</html>

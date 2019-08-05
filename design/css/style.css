@@ -1,0 +1,129 @@
+.silver-shadow {
+  box-shadow: 1rem 1rem 1rem rgba(127, 127, 127, 0.5);
+}
+
+.social-shadow {
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(127, 127, 127, 0.5);
+}
+
+.btn-shadow {
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 255, 0.5);
+}
+
+.header-shadow {
+  text-shadow: 0.5rem 0.5rem 0.25rem rgba(127, 127, 127, 0.5);
+}
+
+.text-shadow {
+  text-shadow: 1px 1px black;
+  color: white;
+  transition: all 0.5s ease-in-out !important;
+}
+.text-shadow:hover {
+  text-shadow: none;
+  border: none;
+  background: none;
+}
+
+hr {
+  width: 10rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(127, 127, 127, 0.5);
+  height: 5px;
+  border-radius: 2px;
+  background-color: #444;
+}
+
+/* 
+#actual-state span {
+	padding-left: .5rem;
+} */
+section,
+article {
+  /* margin: 0 1rem 1rem; */
+}
+
+#services .btn {
+  text-shadow: 1px 1px black;
+  font-weight: 600;
+  /* width: 16em; */
+  border: 1px solid aquamarine !important;
+}
+
+.card {
+  border-radius: 0.5rem !important;
+  border: 1px solid aquamarine !important;
+}
+.card .card-header {
+  background-color: aquamarine !important;
+}
+.card .card-footer {
+  background-color: aquamarine !important;
+}
+
+#portfolio .card img {
+  filter: grayscale(100%);
+  opacity: 0.75;
+}
+#portfolio .card img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.html {
+  color: orangered;
+}
+
+.css {
+  color: blue;
+}
+
+.react {
+  color: #61DAF4;
+}
+
+.bs {
+  color: #563D7C;
+}
+
+.sass {
+  color: #CF649A;
+}
+
+.js {
+  color: yellow;
+}
+
+.vue {
+  color: #41B883;
+}
+
+.node {
+  color: #689F63;
+}
+
+.db {
+  color: gray;
+}
+
+.angular {
+  color: darkred;
+}
+
+.php {
+  color: royalblue;
+}
+
+/* barre sociale */
+.fa-youtube-square,
+.fa-google-plus-square {
+  color: red;
+}
+
+.fa-github-square {
+  color: black;
+}
+
+footer {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+/*# sourceMappingURL=style.css.map */
