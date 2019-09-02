@@ -1,0 +1,78 @@
+<template>
+  <div id="app">
+   <img id="banner" src="../public/banner.png" class="img-fluid" alt="fabezio.fr">
+    <!-- <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Does is work?" /> -->
+    <NavBar></NavBar>
+    <Modals></Modals>
+    <div class="pages">
+      <Home></Home>
+      <Services></Services>
+      <Skills></Skills>
+      <Portfolio></Portfolio>
+    </div>
+    <Footer></Footer>
+    <!--
+    <Test title="Hello World!"/>
+      -->
+
+  </div>
+</template>
+
+<script>
+// import Test from './components/Test.vue'
+import Modals from './components/Modals.vue'
+import NavBar from './components/NavBar.vue'
+import Footer from './components/Footer.vue'
+
+import Home from './components/Pages/Home.vue'
+import Services from './components/Pages/Services.vue'
+import Skills from './components/Pages/Skills.vue'
+import Portfolio from './components/Pages/Portfolio.vue'
+
+// import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'app',
+  
+  components: {
+    // Test, 
+    Modals, NavBar, 
+    Home, Services, Skills, Portfolio,
+    Footer
+  },
+  /*
+  computed: {
+    isShown: function() {
+      return {
+      show: this.show
+      }
+
+    }
+  }
+  */
+
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+/*  margin-top: 60px; */
+}
+.card {
+  border-radius: 0.5rem !important;
+  border: 1px solid aquamarine !important;
+}
+.card .card-header {
+  background-color: aquamarine !important;
+}
+.card .card-footer {
+  background-color: aquamarine !important;
+}
+
+</style>
